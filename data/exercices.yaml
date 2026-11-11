@@ -1,0 +1,169 @@
+version: 1
+description: >
+  Exercices et muscles travaillés. Pour chaque exercice, `muscles` associe le nom
+  exact d'un muscle (voir muscles.yaml) à une intensité de 0 à 100 %
+  (100 = muscle moteur principal, 50 = synergiste, 20 = stabilisateur).
+  Après modification, lancer : uv run --script scripts/build_data.py
+
+# Matériel nécessaire : type -> exercices (un exercice peut figurer dans plusieurs types).
+# Les noms doivent correspondre exactement à ceux de la liste ci-dessous.
+materiel:
+  poids: [Développé couché, Développé militaire, Rowing barre, Élévations latérales, Curl biceps, "Haussements d'épaules", Squat, Soulevé de terre, Soulevé de terre roumain, Fentes, Hip thrust]
+  machine: [Tirage vertical, Extension triceps à la poulie, Presse à cuisses, Leg curl, Leg extension, Mollets debout, Mollets assis, Adducteurs à la machine, Abducteurs à la machine, Face pull]
+  elastique: [Face pull, Rotation externe (coiffe), Renforcement du cou]
+  corps: [Dips, Tractions, Hyperextension lombaire, Suspension à la poutre, Bloc (escalade)]
+  libre: [Pompes, Gainage (planche), Crunch, Relevé de jambes, Russian twist, Relevé de pointes de pied]
+
+# Valeurs préremplies en séance : series, reps (ou duree en secondes pour un effort chronométré), charge en kg.
+defauts:
+  Développé couché: { series: 4, reps: 8, charge: 40 }
+  Développé militaire: { series: 3, reps: 10, charge: 25 }
+  Pompes: { series: 3, reps: 12, charge: 0 }
+  Dips: { series: 3, reps: 10, charge: 0 }
+  Tractions: { series: 4, reps: 6, charge: 0 }
+  Rowing barre: { series: 4, reps: 8, charge: 40 }
+  Tirage vertical: { series: 3, reps: 10, charge: 45 }
+  Face pull: { series: 3, reps: 15, charge: 15 }
+  Élévations latérales: { series: 3, reps: 12, charge: 8 }
+  Curl biceps: { series: 3, reps: 10, charge: 12 }
+  Extension triceps à la poulie: { series: 3, reps: 12, charge: 25 }
+  Haussements d'épaules: { series: 3, reps: 12, charge: 30 }
+  Squat: { series: 4, reps: 8, charge: 60 }
+  Soulevé de terre: { series: 3, reps: 5, charge: 80 }
+  Soulevé de terre roumain: { series: 3, reps: 10, charge: 50 }
+  Fentes: { series: 3, reps: 10, charge: 10 }
+  Presse à cuisses: { series: 4, reps: 10, charge: 100 }
+  Hip thrust: { series: 3, reps: 10, charge: 60 }
+  Leg curl: { series: 3, reps: 12, charge: 30 }
+  Leg extension: { series: 3, reps: 12, charge: 35 }
+  Mollets debout: { series: 4, reps: 15, charge: 40 }
+  Mollets assis: { series: 4, reps: 15, charge: 30 }
+  Adducteurs à la machine: { series: 3, reps: 15, charge: 35 }
+  Abducteurs à la machine: { series: 3, reps: 15, charge: 35 }
+  Gainage (planche): { series: 3, duree: 45, charge: 0 }
+  Crunch: { series: 3, reps: 20, charge: 0 }
+  Relevé de jambes: { series: 3, reps: 12, charge: 0 }
+  Russian twist: { series: 3, reps: 20, charge: 5 }
+  Hyperextension lombaire: { series: 3, reps: 12, charge: 0 }
+  Suspension à la poutre: { series: 5, duree: 10, charge: 0 }
+  Bloc (escalade): { series: 5, duree: 60, charge: 0 }
+  Rotation externe (coiffe): { series: 3, reps: 15, charge: 0 }
+  Relevé de pointes de pied: { series: 3, reps: 15, charge: 0 }
+  Renforcement du cou: { series: 3, reps: 15, charge: 0 }
+
+exercices:
+  # Poussée
+  - nom: Développé couché
+    categorie: Poussée
+    muscles: { "Grand pectoral": 100, "Triceps brachial": 75, "Deltoïde antérieur": 70, "Petit pectoral": 30, "Deltoïde latéral": 20, "Infra-épineux": 15 }
+  - nom: Développé militaire
+    categorie: Poussée
+    muscles: { "Deltoïde antérieur": 100, "Deltoïde latéral": 85, "Triceps brachial": 70, "Trapèze supérieur": 50, "Trapèze": 40, "Grand pectoral": 30, "Supra-épineux": 30, "Droit de l'abdomen": 25, "Érecteurs du rachis": 25, "Oblique externe": 20 }
+  - nom: Pompes
+    categorie: Poussée
+    muscles: { "Grand pectoral": 90, "Triceps brachial": 70, "Deltoïde antérieur": 60, "Droit de l'abdomen": 50, "Transverse de l'abdomen": 45, "Petit pectoral": 30, "Oblique externe": 25, "Grand fessier": 15 }
+  - nom: Dips
+    categorie: Poussée
+    muscles: { "Triceps brachial": 100, "Grand pectoral": 75, "Deltoïde antérieur": 60, "Petit pectoral": 35 }
+
+  # Tirage
+  - nom: Tractions
+    categorie: Tirage
+    muscles: { "Grand dorsal": 100, "Grand rond": 80, "Biceps brachial": 70, "Brachial": 60, "Brachio-radial": 55, "Trapèze": 55, "Rhomboïde majeur": 50, "Groupe des fléchisseurs du poignet et des doigts": 50, "Rhomboïde mineur": 45, "Deltoïde postérieur": 45, "Infra-épineux": 35, "Droit de l'abdomen": 30, "Petit rond": 30, "Triceps brachial": 25 }
+  - nom: Rowing barre
+    categorie: Tirage
+    muscles: { "Grand dorsal": 80, "Rhomboïde majeur": 80, "Trapèze": 80, "Rhomboïde mineur": 70, "Deltoïde postérieur": 70, "Érecteurs du rachis": 70, "Grand rond": 60, "Biceps brachial": 50, "Brachial": 45, "Infra-épineux": 45, "Brachio-radial": 40, "Petit rond": 40, "Groupe des fléchisseurs du poignet et des doigts": 35, "Biceps fémoral": 30, "Grand fessier": 25 }
+  - nom: Tirage vertical
+    categorie: Tirage
+    muscles: { "Grand dorsal": 95, "Grand rond": 75, "Biceps brachial": 55, "Brachial": 50, "Rhomboïde majeur": 40, "Trapèze": 40, "Brachio-radial": 40, "Rhomboïde mineur": 35, "Deltoïde postérieur": 30, "Triceps brachial": 20 }
+  - nom: Face pull
+    categorie: Tirage
+    muscles: { "Deltoïde postérieur": 100, "Infra-épineux": 80, "Petit rond": 70, "Trapèze": 70, "Rhomboïde majeur": 70, "Rhomboïde mineur": 65, "Deltoïde latéral": 35, "Supra-épineux": 30 }
+
+  # Épaules et bras
+  - nom: Élévations latérales
+    categorie: Épaules et bras
+    muscles: { "Deltoïde latéral": 100, "Supra-épineux": 50, "Trapèze supérieur": 40, "Deltoïde antérieur": 30, "Deltoïde postérieur": 25 }
+  - nom: Curl biceps
+    categorie: Épaules et bras
+    muscles: { "Biceps brachial": 100, "Brachial": 80, "Brachio-radial": 60, "Groupe des fléchisseurs du poignet et des doigts": 40, "Deltoïde antérieur": 20 }
+  - nom: Extension triceps à la poulie
+    categorie: Épaules et bras
+    muscles: { "Triceps brachial": 100, "Groupe des extenseurs du poignet et des doigts": 20 }
+  - nom: Haussements d'épaules
+    categorie: Épaules et bras
+    muscles: { "Trapèze supérieur": 100, "Trapèze": 90, "Rhomboïde mineur": 55, "Rhomboïde majeur": 45, "Groupe des fléchisseurs du poignet et des doigts": 40 }
+
+  # Jambes
+  - nom: Squat
+    categorie: Jambes
+    muscles: { "Vaste latéral": 90, "Vaste médial": 90, "Vaste intermédiaire": 90, "Grand fessier": 90, "Droit fémoral": 70, "Grand adducteur": 65, "Érecteurs du rachis": 60, "Moyen fessier": 45, "Long adducteur": 40, "Multifides": 40, "Transverse de l'abdomen": 40, "Biceps fémoral": 30, "Semi-tendineux": 30, "Semi-membraneux": 30, "Court adducteur": 30, "Droit de l'abdomen": 30, "Soléaire": 30, "Carré des lombes": 30, "Oblique externe": 25, "Gastrocnémien": 20 }
+  - nom: Soulevé de terre
+    categorie: Jambes
+    muscles: { "Grand fessier": 95, "Érecteurs du rachis": 90, "Biceps fémoral": 85, "Semi-tendineux": 80, "Semi-membraneux": 80, "Groupe des fléchisseurs du poignet et des doigts": 80, "Trapèze": 70, "Vaste latéral": 60, "Vaste médial": 60, "Vaste intermédiaire": 60, "Grand adducteur": 60, "Grand dorsal": 60, "Multifides": 60, "Trapèze supérieur": 55, "Carré des lombes": 50, "Transverse de l'abdomen": 50, "Rhomboïde majeur": 45, "Rhomboïde mineur": 40, "Droit fémoral": 40, "Moyen fessier": 35, "Droit de l'abdomen": 30, "Deltoïde postérieur": 30, "Soléaire": 25, "Gastrocnémien": 25 }
+  - nom: Soulevé de terre roumain
+    categorie: Jambes
+    muscles: { "Biceps fémoral": 100, "Semi-tendineux": 95, "Semi-membraneux": 95, "Grand fessier": 90, "Érecteurs du rachis": 75, "Grand adducteur": 50, "Groupe des fléchisseurs du poignet et des doigts": 55, "Multifides": 45, "Trapèze": 45, "Grand dorsal": 40, "Carré des lombes": 35, "Gastrocnémien": 20 }
+  - nom: Fentes
+    categorie: Jambes
+    muscles: { "Vaste latéral": 85, "Vaste médial": 85, "Vaste intermédiaire": 85, "Grand fessier": 85, "Droit fémoral": 70, "Moyen fessier": 60, "Grand adducteur": 55, "Petit fessier": 40, "Long adducteur": 40, "Biceps fémoral": 35, "Semi-tendineux": 35, "Semi-membraneux": 35, "Tenseur du fascia lata": 35, "Soléaire": 30, "Gastrocnémien": 25, "Transverse de l'abdomen": 25, "Oblique externe": 20 }
+  - nom: Presse à cuisses
+    categorie: Jambes
+    muscles: { "Vaste latéral": 90, "Vaste médial": 90, "Vaste intermédiaire": 90, "Droit fémoral": 70, "Grand fessier": 65, "Grand adducteur": 50, "Biceps fémoral": 25, "Semi-tendineux": 25, "Semi-membraneux": 25, "Soléaire": 20, "Gastrocnémien": 20 }
+  - nom: Hip thrust
+    categorie: Jambes
+    muscles: { "Grand fessier": 100, "Moyen fessier": 45, "Biceps fémoral": 45, "Semi-tendineux": 45, "Semi-membraneux": 45, "Grand adducteur": 40, "Petit fessier": 30, "Droit fémoral": 25, "Droit de l'abdomen": 25, "Transverse de l'abdomen": 25, "Érecteurs du rachis": 20 }
+  - nom: Leg curl
+    categorie: Jambes
+    muscles: { "Biceps fémoral": 100, "Semi-tendineux": 100, "Semi-membraneux": 100, "Gastrocnémien": 45, "Sartorius": 30, "Gracile": 30, "Plantaire grêle": 15 }
+  - nom: Leg extension
+    categorie: Jambes
+    muscles: { "Droit fémoral": 100, "Vaste latéral": 100, "Vaste médial": 100, "Vaste intermédiaire": 100 }
+  - nom: Mollets debout
+    categorie: Jambes
+    muscles: { "Gastrocnémien": 100, "Soléaire": 70, "Plantaire grêle": 40, "Tibial postérieur": 40, "Fibulaire long": 35, "Fibulaire court": 35, "Long fléchisseur des orteils": 35, "Long fléchisseur de l'hallux": 35 }
+  - nom: Mollets assis
+    categorie: Jambes
+    muscles: { "Soléaire": 100, "Gastrocnémien": 40, "Tibial postérieur": 35, "Fibulaire long": 30, "Fibulaire court": 30, "Long fléchisseur des orteils": 30, "Long fléchisseur de l'hallux": 30, "Plantaire grêle": 25 }
+  - nom: Adducteurs à la machine
+    categorie: Jambes
+    muscles: { "Long adducteur": 100, "Court adducteur": 90, "Grand adducteur": 90, "Gracile": 85, "Pectiné": 80, "Sartorius": 20 }
+  - nom: Abducteurs à la machine
+    categorie: Jambes
+    muscles: { "Moyen fessier": 100, "Petit fessier": 85, "Tenseur du fascia lata": 80, "Grand fessier": 40, "Sartorius": 25 }
+
+  # Tronc
+  - nom: Gainage (planche)
+    categorie: Tronc
+    muscles: { "Transverse de l'abdomen": 100, "Droit de l'abdomen": 85, "Oblique externe": 70, "Oblique interne": 65, "Multifides": 45, "Érecteurs du rachis": 40, "Deltoïde antérieur": 40, "Grand fessier": 40, "Carré des lombes": 35, "Droit fémoral": 30, "Grand pectoral": 25, "Trapèze": 20 }
+  - nom: Crunch
+    categorie: Tronc
+    muscles: { "Droit de l'abdomen": 100, "Oblique externe": 40, "Oblique interne": 35, "Transverse de l'abdomen": 30, "Droit fémoral": 10 }
+  - nom: Relevé de jambes
+    categorie: Tronc
+    muscles: { "Droit de l'abdomen": 85, "Droit fémoral": 70, "Tenseur du fascia lata": 45, "Sartorius": 45, "Transverse de l'abdomen": 45, "Pectiné": 40, "Oblique externe": 40, "Long adducteur": 25 }
+  - nom: Russian twist
+    categorie: Tronc
+    muscles: { "Oblique externe": 90, "Oblique interne": 90, "Droit de l'abdomen": 60, "Transverse de l'abdomen": 55, "Carré des lombes": 30, "Multifides": 25 }
+  - nom: Hyperextension lombaire
+    categorie: Tronc
+    muscles: { "Érecteurs du rachis": 100, "Multifides": 70, "Grand fessier": 65, "Biceps fémoral": 55, "Semi-tendineux": 55, "Semi-membraneux": 55, "Carré des lombes": 55 }
+
+  # Escalade
+  - nom: Suspension à la poutre
+    categorie: Escalade
+    muscles: { "Groupe des fléchisseurs du poignet et des doigts": 100, "Grand dorsal": 50, "Trapèze": 40, "Supra-épineux": 40, "Droit de l'abdomen": 35, "Grand rond": 35, "Brachio-radial": 30, "Infra-épineux": 30, "Biceps brachial": 25, "Brachial": 25, "Petit pectoral": 20 }
+  - nom: Bloc (escalade)
+    categorie: Escalade
+    muscles: { "Groupe des fléchisseurs du poignet et des doigts": 85, "Grand dorsal": 85, "Biceps brachial": 75, "Brachial": 70, "Grand rond": 65, "Droit de l'abdomen": 65, "Brachio-radial": 60, "Grand fessier": 60, "Oblique externe": 55, "Transverse de l'abdomen": 55, "Trapèze": 55, "Vaste latéral": 55, "Vaste médial": 55, "Droit fémoral": 50, "Biceps fémoral": 50, "Oblique interne": 45, "Rhomboïde majeur": 45, "Deltoïde postérieur": 45, "Gastrocnémien": 45, "Groupe des extenseurs du poignet et des doigts": 45, "Semi-tendineux": 40, "Semi-membraneux": 40, "Soléaire": 40, "Long fléchisseur des orteils": 40, "Long fléchisseur de l'hallux": 40, "Triceps brachial": 35, "Tibial antérieur": 30 }
+
+  # Prévention
+  - nom: Rotation externe (coiffe)
+    categorie: Prévention
+    muscles: { "Infra-épineux": 100, "Petit rond": 85, "Deltoïde postérieur": 40, "Supra-épineux": 30 }
+  - nom: Relevé de pointes de pied
+    categorie: Prévention
+    muscles: { "Tibial antérieur": 100, "Long extenseur des orteils": 70, "Long extenseur de l'hallux": 70 }
+  - nom: Renforcement du cou
+    categorie: Prévention
+    muscles: { "Sternocléidomastoïdien": 85, "Splénius de la tête": 85, "Splénius du cou": 85, "Trapèze supérieur": 50 }

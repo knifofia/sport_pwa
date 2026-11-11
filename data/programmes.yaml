@@ -1,0 +1,32 @@
+version: 1
+description: >
+  Programmes de musculation. Chaque programme liste des exercices (noms exacts de
+  exercices.yaml). La sollicitation totale d'un muscle combine les exercices :
+  100 * (1 - produit des (1 - intensité/100)). Elle ne dépasse donc jamais 100 %.
+  Après modification, lancer : uv run --script scripts/build_data.py
+
+programmes:
+  - nom: Push
+    description: Pectoraux, épaules, triceps
+    exercices: [Développé couché, Développé militaire, Dips, Élévations latérales, Extension triceps à la poulie]
+  - nom: Pull
+    description: Dos, biceps, arrière d'épaule
+    exercices: [Tractions, Rowing barre, Tirage vertical, Face pull, Curl biceps]
+  - nom: Legs
+    description: Cuisses, fessiers, mollets
+    exercices: [Squat, Soulevé de terre roumain, Fentes, Leg curl, Mollets debout]
+  - nom: Full body
+    description: Tout le corps en 6 exercices
+    exercices: [Squat, Développé couché, Rowing barre, Développé militaire, Soulevé de terre roumain, Gainage (planche)]
+  - nom: Poids du corps
+    description: Sans matériel
+    exercices: [Pompes, Tractions, Dips, Fentes, Gainage (planche), Relevé de jambes]
+  - nom: Grimpeur
+    description: Tirage, doigts et prévention des épaules
+    exercices: [Tractions, Suspension à la poutre, Face pull, Rotation externe (coiffe), Pompes, Relevé de jambes]
+  - nom: Machines
+    description: Salle, charges guidées
+    exercices: [Presse à cuisses, Tirage vertical, Leg extension, Leg curl, Extension triceps à la poulie, Mollets assis]
+  - nom: Tronc et prévention
+    description: Gainage, lombaires, cou, pieds
+    exercices: [Gainage (planche), Crunch, Russian twist, Hyperextension lombaire, Renforcement du cou, Relevé de pointes de pied]

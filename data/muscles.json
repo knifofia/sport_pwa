@@ -1,0 +1,335 @@
+{
+ "version": 1,
+ "langue": "fr",
+ "description": "Cartographie des principaux muscles visibles ou contribuant au relief musculaire, regroupés par secteurs anatomiques. Les subdivisions indiquées sont des régions ou portions fonctionnelles lorsqu'il ne s'agit pas de muscles anatomiquement séparés.\n",
+ "secteurs": {
+  "tronc": {
+   "epaules": {
+    "nom": "Épaules",
+    "muscles": [
+     {
+      "nom": "Deltoïde antérieur",
+      "region": "Faisceau avant de l'épaule"
+     },
+     {
+      "nom": "Deltoïde latéral",
+      "region": "Faisceau moyen / externe de l'épaule"
+     },
+     {
+      "nom": "Deltoïde postérieur",
+      "region": "Faisceau arrière de l'épaule"
+     }
+    ]
+   },
+   "poitrine": {
+    "nom": "Pectoraux et muscles de la poitrine",
+    "muscles": [
+     {
+      "nom": "Grand pectoral",
+      "subdivisions": [
+       "Faisceau claviculaire",
+       "Faisceau sterno-costal",
+       "Partie abdominale"
+      ]
+     },
+     {
+      "nom": "Petit pectoral",
+      "remarque": "Muscle profond, situé sous le grand pectoral."
+     }
+    ]
+   },
+   "dos": {
+    "nom": "Dos",
+    "muscles": [
+     {
+      "nom": "Grand dorsal"
+     },
+     {
+      "nom": "Trapèze",
+      "subdivisions": [
+       "Faisceau supérieur",
+       "Faisceau moyen",
+       "Faisceau inférieur"
+      ]
+     },
+     {
+      "nom": "Rhomboïde majeur"
+     },
+     {
+      "nom": "Rhomboïde mineur"
+     },
+     {
+      "nom": "Grand rond"
+     },
+     {
+      "nom": "Petit rond"
+     },
+     {
+      "nom": "Infra-épineux"
+     },
+     {
+      "nom": "Supra-épineux",
+      "remarque": "Muscle de la coiffe des rotateurs, peu visible en surface."
+     },
+     {
+      "nom": "Érecteurs du rachis",
+      "subdivisions": [
+       "Ilio-costal",
+       "Longissimus",
+       "Épineux"
+      ]
+     },
+     {
+      "nom": "Multifides",
+      "remarque": "Muscles profonds, peu visibles directement."
+     }
+    ]
+   },
+   "cou": {
+    "nom": "Cou",
+    "muscles": [
+     {
+      "nom": "Sternocléidomastoïdien"
+     },
+     {
+      "nom": "Splénius de la tête"
+     },
+     {
+      "nom": "Splénius du cou"
+     },
+     {
+      "nom": "Trapèze supérieur",
+      "remarque": "Déjà listé dans le dos; contribue à la jonction cou-épaules."
+     }
+    ]
+   },
+   "abdominaux": {
+    "nom": "Paroi abdominale",
+    "muscles": [
+     {
+      "nom": "Droit de l'abdomen",
+      "alias": "Grand droit",
+      "remarque": "Les « tablettes » sont des segments tendineux du même muscle, pas des muscles distincts."
+     },
+     {
+      "nom": "Oblique externe"
+     },
+     {
+      "nom": "Oblique interne"
+     },
+     {
+      "nom": "Transverse de l'abdomen",
+      "remarque": "Muscle profond."
+     }
+    ]
+   },
+   "bas_du_dos_et_flancs": {
+    "nom": "Région lombaire et flancs",
+    "muscles": [
+     {
+      "nom": "Érecteurs du rachis",
+      "remarque": "Déjà listés dans le dos; comprennent notamment les portions lombaires."
+     },
+     {
+      "nom": "Multifides",
+      "remarque": "Muscles profonds le long de la colonne."
+     },
+     {
+      "nom": "Carré des lombes"
+     }
+    ]
+   }
+  },
+  "bras": {
+   "bras": {
+    "nom": "Bras et avant-bras",
+    "biceps_et_flechisseurs_du_coude": [
+     {
+      "nom": "Biceps brachial",
+      "subdivisions": [
+       "Longue portion",
+       "Courte portion"
+      ]
+     },
+     {
+      "nom": "Brachial",
+      "alias": "Brachial antérieur"
+     },
+     {
+      "nom": "Brachio-radial"
+     }
+    ],
+    "triceps": [
+     {
+      "nom": "Triceps brachial",
+      "subdivisions": [
+       "Longue portion",
+       "Chef latéral",
+       "Chef médial"
+      ]
+     }
+    ],
+    "avant_bras": [
+     {
+      "nom": "Groupe des fléchisseurs du poignet et des doigts",
+      "remarque": "Ensemble de muscles de la face antérieure de l'avant-bras."
+     },
+     {
+      "nom": "Groupe des extenseurs du poignet et des doigts",
+      "remarque": "Ensemble de muscles de la face postérieure de l'avant-bras."
+     },
+     {
+      "nom": "Brachio-radial",
+      "remarque": "Déjà listé avec les fléchisseurs du coude; contribue aussi au relief de l'avant-bras."
+     }
+    ]
+   }
+  },
+  "bas_du_corps": {
+   "fessiers": {
+    "nom": "Fessiers",
+    "muscles": [
+     {
+      "nom": "Grand fessier"
+     },
+     {
+      "nom": "Moyen fessier"
+     },
+     {
+      "nom": "Petit fessier",
+      "remarque": "Muscle profond, non directement visible en surface."
+     }
+    ]
+   },
+   "cuisses_avant": {
+    "nom": "Quadriceps",
+    "muscles": [
+     {
+      "nom": "Droit fémoral"
+     },
+     {
+      "nom": "Vaste latéral"
+     },
+     {
+      "nom": "Vaste médial"
+     },
+     {
+      "nom": "Vaste intermédiaire",
+      "remarque": "Muscle profond, situé sous le droit fémoral."
+     }
+    ]
+   },
+   "cuisses_arriere": {
+    "nom": "Ischio-jambiers",
+    "muscles": [
+     {
+      "nom": "Biceps fémoral",
+      "subdivisions": [
+       "Longue portion",
+       "Courte portion"
+      ]
+     },
+     {
+      "nom": "Semi-tendineux"
+     },
+     {
+      "nom": "Semi-membraneux"
+     }
+    ]
+   },
+   "cuisses_interieur": {
+    "nom": "Adducteurs de la cuisse",
+    "muscles": [
+     {
+      "nom": "Long adducteur"
+     },
+     {
+      "nom": "Court adducteur"
+     },
+     {
+      "nom": "Grand adducteur"
+     },
+     {
+      "nom": "Gracile"
+     },
+     {
+      "nom": "Pectiné"
+     }
+    ]
+   },
+   "cuisses_exterieur": {
+    "nom": "Muscles et structures latérales de la cuisse",
+    "muscles": [
+     {
+      "nom": "Tenseur du fascia lata",
+      "remarque": "Muscle situé sur le côté de la hanche; agit avec le tractus ilio-tibial."
+     },
+     {
+      "nom": "Sartorius",
+      "alias": "Couturier",
+      "remarque": "Muscle superficiel traversant obliquement l'avant de la cuisse."
+     }
+    ]
+   },
+   "mollets": {
+    "nom": "Mollets",
+    "muscles": [
+     {
+      "nom": "Gastrocnémien",
+      "alias": "Jumeaux",
+      "subdivisions": [
+       "Chef médial",
+       "Chef latéral"
+      ]
+     },
+     {
+      "nom": "Soléaire"
+     },
+     {
+      "nom": "Plantaire grêle",
+      "remarque": "Petit muscle inconstant, à faible impact esthétique."
+     }
+    ]
+   },
+   "jambe_et_cheville": {
+    "nom": "Autres muscles de la jambe",
+    "muscles": [
+     {
+      "nom": "Tibial antérieur"
+     },
+     {
+      "nom": "Long extenseur des orteils"
+     },
+     {
+      "nom": "Long extenseur de l'hallux"
+     },
+     {
+      "nom": "Fibulaire long",
+      "alias": "Péronier long"
+     },
+     {
+      "nom": "Fibulaire court",
+      "alias": "Péronier court"
+     },
+     {
+      "nom": "Tibial postérieur",
+      "remarque": "Muscle profond."
+     },
+     {
+      "nom": "Long fléchisseur des orteils",
+      "remarque": "Muscle profond."
+     },
+     {
+      "nom": "Long fléchisseur de l'hallux",
+      "remarque": "Muscle profond."
+     }
+    ]
+   }
+  }
+ },
+ "notes": [
+  "Les subdivisions d'un muscle (par exemple les faisceaux du deltoïde) ne sont pas nécessairement des muscles indépendants.",
+  "Certains muscles sont profonds et ne sont pas directement visibles, mais contribuent à la posture, à la stabilité ou au volume global.",
+  "Cette liste couvre les principaux muscles pertinents pour une cartographie de musculation; elle ne constitue pas un inventaire anatomique exhaustif de tous les muscles du corps."
+ ]
+}

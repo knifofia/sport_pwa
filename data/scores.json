@@ -1,0 +1,440 @@
+{
+ "version": 1,
+ "description": "Scores des muscles par critère (en %). Pour ajouter une colonne : déclarer le critère ci-dessous, puis renseigner sa valeur pour chaque muscle. Après modification, lancer : uv run --script scripts/build_data.py\n",
+ "criteres": {
+  "impact_visuel": {
+   "nom": "Impact visuel",
+   "court": "Visuel",
+   "description": "Part du muscle dans le relief et l'aspect visible du physique (0 % = invisible, 100 % = déterminant)."
+  },
+  "escalade": {
+   "nom": "Importance pour l'escalade",
+   "court": "Escalade",
+   "description": "Rôle du muscle dans la traction, la prise, le gainage et la poussée des jambes en escalade (0 % = anecdotique, 100 % = indispensable)."
+  },
+  "sante": {
+   "nom": "Importance pour la santé",
+   "court": "Santé",
+   "description": "Rôle du muscle dans la posture, la protection des articulations et la mobilité au quotidien (0 % = négligeable, 100 % = essentiel)."
+  },
+  "risque_blessure": {
+   "nom": "Risque de blessure",
+   "court": "Risque",
+   "inverse": true,
+   "description": "Fréquence des blessures et des déséquilibres touchant ce muscle (0 % = rare, 100 % = très fréquent)."
+  },
+  "force_fonctionnelle": {
+   "nom": "Force fonctionnelle",
+   "court": "Force",
+   "description": "Contribution à la force brute dans les mouvements de base (tirer, pousser, squat, soulever) (0 % = nulle, 100 % = majeure)."
+  }
+ },
+ "scores": {
+  "Deltoïde antérieur": {
+   "impact_visuel": 80,
+   "escalade": 45,
+   "sante": 60,
+   "risque_blessure": 40,
+   "force_fonctionnelle": 70
+  },
+  "Deltoïde latéral": {
+   "impact_visuel": 95,
+   "escalade": 40,
+   "sante": 55,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 70
+  },
+  "Deltoïde postérieur": {
+   "impact_visuel": 75,
+   "escalade": 60,
+   "sante": 70,
+   "risque_blessure": 45,
+   "force_fonctionnelle": 45
+  },
+  "Grand pectoral": {
+   "impact_visuel": 90,
+   "escalade": 35,
+   "sante": 55,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 95
+  },
+  "Petit pectoral": {
+   "impact_visuel": 15,
+   "escalade": 30,
+   "sante": 35,
+   "risque_blessure": 40,
+   "force_fonctionnelle": 25
+  },
+  "Grand dorsal": {
+   "impact_visuel": 95,
+   "escalade": 100,
+   "sante": 80,
+   "risque_blessure": 25,
+   "force_fonctionnelle": 95
+  },
+  "Trapèze": {
+   "impact_visuel": 85,
+   "escalade": 75,
+   "sante": 80,
+   "risque_blessure": 50,
+   "force_fonctionnelle": 70
+  },
+  "Rhomboïde majeur": {
+   "impact_visuel": 35,
+   "escalade": 70,
+   "sante": 65,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 55
+  },
+  "Rhomboïde mineur": {
+   "impact_visuel": 25,
+   "escalade": 60,
+   "sante": 60,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 45
+  },
+  "Grand rond": {
+   "impact_visuel": 55,
+   "escalade": 80,
+   "sante": 50,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 60
+  },
+  "Petit rond": {
+   "impact_visuel": 30,
+   "escalade": 55,
+   "sante": 60,
+   "risque_blessure": 55,
+   "force_fonctionnelle": 35
+  },
+  "Infra-épineux": {
+   "impact_visuel": 40,
+   "escalade": 65,
+   "sante": 75,
+   "risque_blessure": 70,
+   "force_fonctionnelle": 40
+  },
+  "Supra-épineux": {
+   "impact_visuel": 20,
+   "escalade": 50,
+   "sante": 75,
+   "risque_blessure": 90,
+   "force_fonctionnelle": 35
+  },
+  "Érecteurs du rachis": {
+   "impact_visuel": 60,
+   "escalade": 60,
+   "sante": 95,
+   "risque_blessure": 70,
+   "force_fonctionnelle": 85
+  },
+  "Multifides": {
+   "impact_visuel": 10,
+   "escalade": 45,
+   "sante": 90,
+   "risque_blessure": 55,
+   "force_fonctionnelle": 40
+  },
+  "Biceps brachial": {
+   "impact_visuel": 85,
+   "escalade": 90,
+   "sante": 50,
+   "risque_blessure": 45,
+   "force_fonctionnelle": 75
+  },
+  "Brachial": {
+   "impact_visuel": 45,
+   "escalade": 80,
+   "sante": 50,
+   "risque_blessure": 30,
+   "force_fonctionnelle": 60
+  },
+  "Brachio-radial": {
+   "impact_visuel": 50,
+   "escalade": 75,
+   "sante": 45,
+   "risque_blessure": 30,
+   "force_fonctionnelle": 50
+  },
+  "Triceps brachial": {
+   "impact_visuel": 90,
+   "escalade": 55,
+   "sante": 60,
+   "risque_blessure": 40,
+   "force_fonctionnelle": 75
+  },
+  "Groupe des fléchisseurs du poignet et des doigts": {
+   "impact_visuel": 55,
+   "escalade": 100,
+   "sante": 55,
+   "risque_blessure": 55,
+   "force_fonctionnelle": 70
+  },
+  "Groupe des extenseurs du poignet et des doigts": {
+   "impact_visuel": 50,
+   "escalade": 65,
+   "sante": 60,
+   "risque_blessure": 65,
+   "force_fonctionnelle": 45
+  },
+  "Sternocléidomastoïdien": {
+   "impact_visuel": 30,
+   "escalade": 10,
+   "sante": 55,
+   "risque_blessure": 40,
+   "force_fonctionnelle": 15
+  },
+  "Splénius de la tête": {
+   "impact_visuel": 15,
+   "escalade": 10,
+   "sante": 55,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 15
+  },
+  "Splénius du cou": {
+   "impact_visuel": 15,
+   "escalade": 10,
+   "sante": 55,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 15
+  },
+  "Trapèze supérieur": {
+   "impact_visuel": 75,
+   "escalade": 45,
+   "sante": 60,
+   "risque_blessure": 60,
+   "force_fonctionnelle": 45
+  },
+  "Droit de l'abdomen": {
+   "impact_visuel": 85,
+   "escalade": 85,
+   "sante": 85,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 70
+  },
+  "Oblique externe": {
+   "impact_visuel": 60,
+   "escalade": 80,
+   "sante": 80,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 65
+  },
+  "Oblique interne": {
+   "impact_visuel": 20,
+   "escalade": 70,
+   "sante": 80,
+   "risque_blessure": 30,
+   "force_fonctionnelle": 60
+  },
+  "Transverse de l'abdomen": {
+   "impact_visuel": 25,
+   "escalade": 80,
+   "sante": 95,
+   "risque_blessure": 25,
+   "force_fonctionnelle": 70
+  },
+  "Carré des lombes": {
+   "impact_visuel": 10,
+   "escalade": 40,
+   "sante": 85,
+   "risque_blessure": 65,
+   "force_fonctionnelle": 50
+  },
+  "Grand fessier": {
+   "impact_visuel": 90,
+   "escalade": 80,
+   "sante": 95,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 95
+  },
+  "Moyen fessier": {
+   "impact_visuel": 55,
+   "escalade": 65,
+   "sante": 90,
+   "risque_blessure": 55,
+   "force_fonctionnelle": 65
+  },
+  "Petit fessier": {
+   "impact_visuel": 10,
+   "escalade": 45,
+   "sante": 70,
+   "risque_blessure": 40,
+   "force_fonctionnelle": 30
+  },
+  "Droit fémoral": {
+   "impact_visuel": 85,
+   "escalade": 70,
+   "sante": 75,
+   "risque_blessure": 55,
+   "force_fonctionnelle": 85
+  },
+  "Vaste latéral": {
+   "impact_visuel": 90,
+   "escalade": 75,
+   "sante": 80,
+   "risque_blessure": 50,
+   "force_fonctionnelle": 90
+  },
+  "Vaste médial": {
+   "impact_visuel": 80,
+   "escalade": 75,
+   "sante": 85,
+   "risque_blessure": 55,
+   "force_fonctionnelle": 85
+  },
+  "Vaste intermédiaire": {
+   "impact_visuel": 25,
+   "escalade": 70,
+   "sante": 70,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 80
+  },
+  "Biceps fémoral": {
+   "impact_visuel": 70,
+   "escalade": 75,
+   "sante": 80,
+   "risque_blessure": 90,
+   "force_fonctionnelle": 80
+  },
+  "Semi-tendineux": {
+   "impact_visuel": 55,
+   "escalade": 70,
+   "sante": 75,
+   "risque_blessure": 85,
+   "force_fonctionnelle": 70
+  },
+  "Semi-membraneux": {
+   "impact_visuel": 50,
+   "escalade": 70,
+   "sante": 75,
+   "risque_blessure": 85,
+   "force_fonctionnelle": 70
+  },
+  "Long adducteur": {
+   "impact_visuel": 40,
+   "escalade": 55,
+   "sante": 60,
+   "risque_blessure": 60,
+   "force_fonctionnelle": 50
+  },
+  "Court adducteur": {
+   "impact_visuel": 20,
+   "escalade": 45,
+   "sante": 50,
+   "risque_blessure": 50,
+   "force_fonctionnelle": 40
+  },
+  "Grand adducteur": {
+   "impact_visuel": 45,
+   "escalade": 65,
+   "sante": 70,
+   "risque_blessure": 55,
+   "force_fonctionnelle": 70
+  },
+  "Gracile": {
+   "impact_visuel": 25,
+   "escalade": 40,
+   "sante": 40,
+   "risque_blessure": 55,
+   "force_fonctionnelle": 25
+  },
+  "Pectiné": {
+   "impact_visuel": 15,
+   "escalade": 40,
+   "sante": 40,
+   "risque_blessure": 50,
+   "force_fonctionnelle": 20
+  },
+  "Tenseur du fascia lata": {
+   "impact_visuel": 30,
+   "escalade": 40,
+   "sante": 55,
+   "risque_blessure": 60,
+   "force_fonctionnelle": 40
+  },
+  "Sartorius": {
+   "impact_visuel": 35,
+   "escalade": 40,
+   "sante": 40,
+   "risque_blessure": 40,
+   "force_fonctionnelle": 25
+  },
+  "Gastrocnémien": {
+   "impact_visuel": 80,
+   "escalade": 60,
+   "sante": 75,
+   "risque_blessure": 65,
+   "force_fonctionnelle": 70
+  },
+  "Soléaire": {
+   "impact_visuel": 45,
+   "escalade": 65,
+   "sante": 85,
+   "risque_blessure": 50,
+   "force_fonctionnelle": 65
+  },
+  "Plantaire grêle": {
+   "impact_visuel": 5,
+   "escalade": 5,
+   "sante": 5,
+   "risque_blessure": 30,
+   "force_fonctionnelle": 5
+  },
+  "Tibial antérieur": {
+   "impact_visuel": 35,
+   "escalade": 55,
+   "sante": 65,
+   "risque_blessure": 60,
+   "force_fonctionnelle": 45
+  },
+  "Long extenseur des orteils": {
+   "impact_visuel": 15,
+   "escalade": 30,
+   "sante": 45,
+   "risque_blessure": 40,
+   "force_fonctionnelle": 20
+  },
+  "Long extenseur de l'hallux": {
+   "impact_visuel": 10,
+   "escalade": 25,
+   "sante": 40,
+   "risque_blessure": 35,
+   "force_fonctionnelle": 15
+  },
+  "Fibulaire long": {
+   "impact_visuel": 25,
+   "escalade": 40,
+   "sante": 60,
+   "risque_blessure": 70,
+   "force_fonctionnelle": 40
+  },
+  "Fibulaire court": {
+   "impact_visuel": 15,
+   "escalade": 35,
+   "sante": 55,
+   "risque_blessure": 65,
+   "force_fonctionnelle": 25
+  },
+  "Tibial postérieur": {
+   "impact_visuel": 10,
+   "escalade": 50,
+   "sante": 70,
+   "risque_blessure": 70,
+   "force_fonctionnelle": 35
+  },
+  "Long fléchisseur des orteils": {
+   "impact_visuel": 10,
+   "escalade": 60,
+   "sante": 55,
+   "risque_blessure": 45,
+   "force_fonctionnelle": 30
+  },
+  "Long fléchisseur de l'hallux": {
+   "impact_visuel": 10,
+   "escalade": 60,
+   "sante": 55,
+   "risque_blessure": 45,
+   "force_fonctionnelle": 30
+  }
+ }
+}

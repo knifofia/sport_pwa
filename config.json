@@ -1,0 +1,36 @@
+{
+  "appName": "Sport",
+  "accentColor": "#4ade80",
+  "restSeconds": 20,
+  "weightUnit": "kg",
+  "programs": [
+    {
+      "id": "push",
+      "name": "Push",
+      "exercises": [
+        { "name": "Développé couché", "sets": 4, "reps": 8, "weight": 40 },
+        { "name": "Développé épaules", "sets": 3, "reps": 10, "weight": 20 },
+        { "name": "Dips", "sets": 3, "reps": 10, "weight": 0 }
+      ]
+    },
+    {
+      "id": "pull",
+      "name": "Pull",
+      "exercises": [
+        { "name": "Tractions", "sets": 4, "reps": 6, "weight": 0 },
+        { "name": "Rowing barre", "sets": 4, "reps": 8, "weight": 40 },
+        { "name": "Curl biceps", "sets": 3, "reps": 12, "weight": 12 }
+      ]
+    },
+    {
+      "id": "legs",
+      "name": "Legs",
+      "restSeconds": 120,
+      "exercises": [
+        { "name": "Squat", "sets": 4, "reps": 8, "weight": 60 },
+        { "name": "Soulevé de terre roumain", "sets": 3, "reps": 10, "weight": 50 },
+        { "name": "Mollets", "sets": 3, "reps": 15, "weight": 30 }
+      ]
+    }
+  ]
+}
